@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+pantry_pal_memory.json
+pantry_pal_online_feedback.json
+.venv/
+venv/
+.env

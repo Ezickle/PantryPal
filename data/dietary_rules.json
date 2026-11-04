@@ -1,0 +1,151 @@
+{
+  "allergens": {
+    "dairy": [
+      "milk",
+      "cream",
+      "butter",
+      "cheese",
+      "yogurt",
+      "ghee"
+    ],
+    "eggs": [
+      "egg",
+      "eggs",
+      "mayonnaise"
+    ],
+    "peanuts": [
+      "peanut",
+      "peanuts"
+    ],
+    "tree nuts": [
+      "almond",
+      "cashew",
+      "walnut",
+      "pistachio",
+      "hazelnut"
+    ],
+    "soy": [
+      "soy",
+      "tofu",
+      "miso",
+      "tempeh"
+    ],
+    "gluten": [
+      "wheat",
+      "flour",
+      "bread",
+      "pasta",
+      "noodle",
+      "couscous",
+      "barley",
+      "rye"
+    ],
+    "fish": [
+      "fish",
+      "tuna",
+      "salmon",
+      "cod",
+      "anchovy",
+      "sardine"
+    ],
+    "shellfish": [
+      "shrimp",
+      "prawn",
+      "crab",
+      "lobster",
+      "mussel",
+      "oyster"
+    ],
+    "sesame": [
+      "sesame",
+      "tahini"
+    ]
+  },
+  "diet_exclusions": {
+    "vegan": [
+      "chicken",
+      "beef",
+      "pork",
+      "lamb",
+      "turkey",
+      "bacon",
+      "ham",
+      "sausage",
+      "duck",
+      "fish",
+      "tuna",
+      "salmon",
+      "cod",
+      "anchovy",
+      "sardine",
+      "shrimp",
+      "prawn",
+      "crab",
+      "lobster",
+      "mussel",
+      "oyster",
+      "milk",
+      "cream",
+      "butter",
+      "cheese",
+      "yogurt",
+      "ghee",
+      "egg",
+      "eggs",
+      "mayonnaise",
+      "honey"
+    ],
+    "vegetarian": [
+      "chicken",
+      "beef",
+      "pork",
+      "lamb",
+      "turkey",
+      "bacon",
+      "ham",
+      "sausage",
+      "duck",
+      "fish",
+      "tuna",
+      "salmon",
+      "cod",
+      "anchovy",
+      "sardine",
+      "shrimp",
+      "prawn",
+      "crab",
+      "lobster",
+      "mussel",
+      "oyster"
+    ],
+    "pescatarian": [
+      "chicken",
+      "beef",
+      "pork",
+      "lamb",
+      "turkey",
+      "bacon",
+      "ham",
+      "sausage",
+      "duck"
+    ],
+    "dairy-free": [
+      "milk",
+      "cream",
+      "butter",
+      "cheese",
+      "yogurt",
+      "ghee"
+    ],
+    "gluten-free": [
+      "wheat",
+      "flour",
+      "bread",
+      "pasta",
+      "noodle",
+      "couscous",
+      "barley",
+      "rye"
+    ]
+  }
+}

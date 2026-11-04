@@ -1,0 +1,394 @@
+{
+  "cuisine_areas": {
+    "japanese": "Japanese",
+    "italian": "Italian",
+    "mexican": "Mexican",
+    "chinese": "Chinese",
+    "indian": "Indian",
+    "thai": "Thai",
+    "french": "French",
+    "greek": "Greek",
+    "british": "British",
+    "canadian": "Canadian",
+    "moroccan": "Moroccan",
+    "turkish": "Turkish",
+    "american": "American",
+    "spanish": "Spanish",
+    "portuguese": "Portuguese",
+    "vietnamese": "Vietnamese",
+    "malaysian": "Malaysian",
+    "tunisian": "Tunisian",
+    "jamaican": "Jamaican",
+    "polish": "Polish",
+    "russian": "Russian",
+    "egyptian": "Egyptian",
+    "irish": "Irish",
+    "croatian": "Croatian",
+    "ukrainian": "Ukrainian",
+    "kenyan": "Kenyan",
+    "dutch": "Dutch",
+    "filipino": "Filipino"
+  },
+  "mood_aliases": {
+    "dessert": "sweet",
+    "desserts": "sweet",
+    "sugary": "sweet",
+    "treat": "sweet",
+    "treats": "sweet",
+    "indulgent": "sweet",
+    "chocolatey": "sweet",
+    "sweet tooth": "sweet",
+    "hot": "spicy",
+    "fiery": "spicy",
+    "heat": "spicy",
+    "chilli": "spicy",
+    "chili": "spicy",
+    "savoury": "savory",
+    "umami": "savory",
+    "cozy": "comfort",
+    "comforting": "comfort",
+    "comfort food": "comfort",
+    "filling": "hearty",
+    "substantial": "hearty",
+    "refreshing": "fresh",
+    "light": "fresh",
+    "zesty": "citrusy",
+    "tangy": "citrusy",
+    "lemony": "citrusy",
+    "crunchy": "crispy",
+    "crisp": "crispy",
+    "silky": "creamy",
+    "rich": "creamy",
+    "smoked": "smoky",
+    "smokey": "smoky",
+    "morning": "breakfast",
+    "brunch": "breakfast",
+    "seafood": "seafood",
+    "fishy": "seafood",
+    "peppery": "spicy",
+    "hot and spicy": "spicy",
+    "decadent": "sweet",
+    "dessert like": "sweet",
+    "tropical": "tropical",
+    "herby": "herby",
+    "herbaceous": "herby",
+    "nutty": "nutty",
+    "garlicky": "garlicky",
+    "garlic forward": "garlicky",
+    "not spicy": "mild",
+    "non spicy": "mild"
+  },
+  "labels": [
+    "sweet",
+    "spicy",
+    "savory",
+    "comfort",
+    "hearty",
+    "fresh",
+    "citrusy",
+    "creamy",
+    "smoky",
+    "crispy",
+    "tropical",
+    "herby",
+    "nutty",
+    "garlicky",
+    "mild",
+    "breakfast",
+    "seafood"
+  ],
+  "mood_rules": {
+    "sweet": {
+      "category_any": [
+        "dessert"
+      ],
+      "terms_any": [
+        "sugar",
+        "honey",
+        "chocolate",
+        "cocoa",
+        "syrup",
+        "jam",
+        "fruit",
+        "cream"
+      ]
+    },
+    "spicy": {
+      "terms_any": [
+        "chili",
+        "chilli",
+        "jalapeno",
+        "cayenne",
+        "hot sauce",
+        "sriracha",
+        "chili powder",
+        "curry paste"
+      ]
+    },
+    "savory": {
+      "category_none": [
+        "dessert"
+      ]
+    },
+    "comfort": {
+      "terms_any": [
+        "stew",
+        "soup",
+        "casserole",
+        "pie",
+        "roast",
+        "macaroni",
+        "lasagna"
+      ]
+    },
+    "hearty": {
+      "terms_any": [
+        "stew",
+        "potato",
+        "casserole",
+        "beef",
+        "pasta",
+        "bean",
+        "pie"
+      ]
+    },
+    "fresh": {
+      "terms_any": [
+        "salad",
+        "cucumber",
+        "lettuce",
+        "lemon",
+        "lime",
+        "mint",
+        "parsley"
+      ]
+    },
+    "citrusy": {
+      "terms_any": [
+        "lemon",
+        "lime",
+        "orange",
+        "citrus"
+      ]
+    },
+    "creamy": {
+      "terms_any": [
+        "cream",
+        "cheese",
+        "coconut milk",
+        "yogurt",
+        "creamy"
+      ]
+    },
+    "smoky": {
+      "terms_any": [
+        "smoked",
+        "smoky",
+        "bacon",
+        "barbecue",
+        "bbq"
+      ]
+    },
+    "crispy": {
+      "terms_any": [
+        "crispy",
+        "crunchy",
+        "fried",
+        "breadcrumb"
+      ]
+    },
+    "breakfast": {
+      "category_any": [
+        "breakfast"
+      ],
+      "title_any": [
+        "pancake",
+        "waffle",
+        "omelet",
+        "omelette",
+        "porridge",
+        "toast"
+      ]
+    },
+    "seafood": {
+      "category_any": [
+        "seafood"
+      ],
+      "ingredient_any": [
+        "fish",
+        "tuna",
+        "salmon",
+        "cod",
+        "shrimp",
+        "prawn",
+        "crab",
+        "lobster",
+        "mussel",
+        "oyster"
+      ]
+    },
+    "mild": {
+      "terms_none": [
+        "chili",
+        "chilli",
+        "jalapeno",
+        "cayenne",
+        "hot sauce",
+        "sriracha"
+      ]
+    },
+    "tropical": {
+      "terms_any": [
+        "mango",
+        "pineapple",
+        "coconut",
+        "papaya",
+        "banana"
+      ]
+    },
+    "herby": {
+      "terms_any": [
+        "basil",
+        "parsley",
+        "mint",
+        "dill",
+        "thyme",
+        "rosemary",
+        "coriander"
+      ]
+    },
+    "nutty": {
+      "terms_any": [
+        "peanut",
+        "almond",
+        "cashew",
+        "walnut",
+        "pistachio",
+        "hazelnut"
+      ]
+    },
+    "garlicky": {
+      "terms_any": [
+        "garlic"
+      ]
+    }
+  },
+  "mood_searches": {
+    "sweet": {
+      "categories": [
+        "Dessert"
+      ]
+    },
+    "spicy": {
+      "ingredients": [
+        "chili",
+        "chilli",
+        "cayenne"
+      ]
+    },
+    "seafood": {
+      "categories": [
+        "Seafood"
+      ]
+    },
+    "breakfast": {
+      "categories": [
+        "Breakfast"
+      ]
+    },
+    "savory": {
+      "terms": [
+        "chicken",
+        "rice",
+        "pasta",
+        "potato"
+      ]
+    },
+    "mild": {
+      "terms": [
+        "chicken",
+        "rice",
+        "pasta",
+        "potato"
+      ]
+    },
+    "comfort": {
+      "terms": [
+        "stew",
+        "soup",
+        "casserole",
+        "pie"
+      ]
+    },
+    "hearty": {
+      "terms": [
+        "stew",
+        "potato",
+        "casserole",
+        "beef"
+      ]
+    },
+    "fresh": {
+      "terms": [
+        "salad",
+        "cucumber",
+        "lettuce",
+        "lemon"
+      ]
+    },
+    "citrusy": {
+      "terms": [
+        "lemon",
+        "lime",
+        "orange"
+      ]
+    },
+    "crispy": {
+      "terms": [
+        "crispy",
+        "fried",
+        "breadcrumb"
+      ]
+    },
+    "creamy": {
+      "terms": [
+        "cream",
+        "cheese",
+        "coconut milk"
+      ]
+    },
+    "smoky": {
+      "terms": [
+        "smoked paprika",
+        "bacon",
+        "barbecue"
+      ]
+    },
+    "tropical": {
+      "terms": [
+        "mango",
+        "pineapple",
+        "coconut"
+      ]
+    },
+    "herby": {
+      "terms": [
+        "basil",
+        "parsley",
+        "mint"
+      ]
+    },
+    "nutty": {
+      "terms": [
+        "peanut",
+        "almond",
+        "cashew"
+      ]
+    },
+    "garlicky": {
+      "terms": [
+        "garlic"
+      ]
+    }
+  }
+}

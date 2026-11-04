@@ -1,0 +1,73 @@
+{
+  "lemon": [
+    "lime"
+  ],
+  "lime": [
+    "lemon"
+  ],
+  "chickpea": [
+    "white bean",
+    "black bean"
+  ],
+  "white bean": [
+    "chickpea",
+    "black bean"
+  ],
+  "black bean": [
+    "kidney bean",
+    "white bean"
+  ],
+  "kidney bean": [
+    "black bean",
+    "white bean"
+  ],
+  "rice": [
+    "quinoa"
+  ],
+  "quinoa": [
+    "rice"
+  ],
+  "coriander": [
+    "parsley"
+  ],
+  "parsley": [
+    "coriander"
+  ],
+  "yogurt": [
+    "sour cream"
+  ],
+  "sour cream": [
+    "yogurt"
+  ],
+  "chicken": [
+    "tofu",
+    "chickpea"
+  ],
+  "tofu": [
+    "shrimp"
+  ],
+  "beef": [
+    "lentil"
+  ],
+  "lentil": [
+    "beef"
+  ],
+  "tomato": [
+    "canned tomato"
+  ],
+  "canned tomato": [
+    "tomato"
+  ],
+  "cream": [
+    "coconut milk"
+  ],
+  "coconut milk": [
+    "cream"
+  ],
+  "shrimp": [
+    "tofu"
+  ],
+  "egg": [
+    "flaxseed"
+  ]
+}

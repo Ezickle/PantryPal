@@ -1,0 +1,177 @@
+{
+  "unit_conversions": {
+    "tsp": [
+      5.0,
+      "ml"
+    ],
+    "teaspoon": [
+      5.0,
+      "ml"
+    ],
+    "teaspoons": [
+      5.0,
+      "ml"
+    ],
+    "tbsp": [
+      15.0,
+      "ml"
+    ],
+    "tablespoon": [
+      15.0,
+      "ml"
+    ],
+    "tablespoons": [
+      15.0,
+      "ml"
+    ],
+    "cup": [
+      240.0,
+      "ml"
+    ],
+    "cups": [
+      240.0,
+      "ml"
+    ],
+    "ml": [
+      1.0,
+      "ml"
+    ],
+    "milliliter": [
+      1.0,
+      "ml"
+    ],
+    "milliliters": [
+      1.0,
+      "ml"
+    ],
+    "l": [
+      1000.0,
+      "ml"
+    ],
+    "liter": [
+      1000.0,
+      "ml"
+    ],
+    "liters": [
+      1000.0,
+      "ml"
+    ],
+    "g": [
+      1.0,
+      "g"
+    ],
+    "gram": [
+      1.0,
+      "g"
+    ],
+    "grams": [
+      1.0,
+      "g"
+    ],
+    "kg": [
+      1000.0,
+      "g"
+    ],
+    "kilogram": [
+      1000.0,
+      "g"
+    ],
+    "kilograms": [
+      1000.0,
+      "g"
+    ],
+    "oz": [
+      28.3495,
+      "g"
+    ],
+    "ounce": [
+      28.3495,
+      "g"
+    ],
+    "ounces": [
+      28.3495,
+      "g"
+    ],
+    "lb": [
+      453.592,
+      "g"
+    ],
+    "lbs": [
+      453.592,
+      "g"
+    ],
+    "pound": [
+      453.592,
+      "g"
+    ],
+    "pounds": [
+      453.592,
+      "g"
+    ]
+  },
+  "package_sizes": {
+    "pasta": {
+      "g": 500
+    },
+    "noodle": {
+      "g": 500
+    },
+    "rice": {
+      "g": 1000
+    },
+    "lentil": {
+      "g": 500
+    },
+    "oat": {
+      "g": 500
+    },
+    "flour": {
+      "g": 1000
+    },
+    "chickpea flour": {
+      "g": 500
+    },
+    "sugar": {
+      "g": 1000
+    },
+    "powdered sugar": {
+      "g": 500
+    },
+    "chicken": {
+      "g": 500
+    },
+    "beef": {
+      "g": 500
+    },
+    "pork": {
+      "g": 500
+    },
+    "tofu": {
+      "g": 400
+    },
+    "shrimp": {
+      "g": 400
+    },
+    "cheese": {
+      "g": 200
+    },
+    "oil": {
+      "ml": 500
+    },
+    "broth": {
+      "ml": 1000
+    },
+    "milk": {
+      "ml": 1000
+    },
+    "soy sauce": {
+      "ml": 150
+    },
+    "cream": {
+      "ml": 300
+    },
+    "coconut milk": {
+      "ml": 400
+    }
+  }
+}
