@@ -209,7 +209,7 @@ class PantryPalUI:
                          fill="#93a197", font=("Segoe UI", 8))
 
     def _load_hero_photos(self):
-        assets = Path(__file__).with_name("assets")
+        assets = Path(__file__).resolve().parent.parent / "assets"
         self.hero_photos = []
         for filename in ("hero-pasta.png", "hero-curry.png", "hero-vegetables.png"):
             try:

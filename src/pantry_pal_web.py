@@ -142,9 +142,9 @@ h1{{font-size:clamp(30px,5vw,48px);line-height:1.1;margin:12px 0}}.lead{{color:v
 .carousel-track{{gap:12px}}.quick-card{{flex:0 0 calc((100% - 24px)/3);display:flex;flex-direction:column;border-radius:15px;min-width:0}}.quick-card img{{width:100%;height:180px;min-height:0;object-fit:cover;padding:0}}.quick-card-copy{{display:flex;flex-direction:column;align-items:flex-start;gap:8px;padding:13px}}.quick-card-copy strong{{padding:0;font-size:15px;line-height:1.25}}.recipe-labels{{display:flex;flex-wrap:wrap;gap:5px}}.recipe-label{{display:inline-flex;padding:3px 7px;border-radius:99px;background:#22372a;border:1px solid #385443;color:#c9ecd4;font-size:10px;line-height:1.25}}@media(max-width:700px){{.quick-carousel{{grid-template-columns:25px minmax(0,1fr) 25px;gap:4px}}.carousel-arrow{{width:25px;height:32px;font-size:22px}}.carousel-track{{gap:7px}}.quick-card{{flex-basis:calc((100% - 14px)/3)}}.quick-card img{{height:100px}}.quick-card-copy{{padding:8px 6px}}.quick-card-copy strong{{font-size:12px}}.recipe-label{{font-size:8px;padding:2px 5px}}}}
 </style></head><body><main>
 <header><div class="brand">🥬 Pantry<b>Pal</b></div><div class="badge">FREE · RUNS ON YOUR COMPUTER</div></header>
-<h1>Make something good<br>with what you have.</h1><p class="lead">Plan meals, use your pantry, and get a combined shopping list.</p>
-<section class="card discover-card"><div class="popular-heading"><h2>Explore TheMealDB</h2><span>Search live recipes across the database</span></div>
-<form class="discover-form" method="post" action="/discover"><label><span>Recipe name or ingredient</span><input name="discover_query" value="{esc(values.get("discover_query", ""))}" placeholder="Try eggplant, salmon, or curry"></label><label><span>Cuisine or food mood (optional)</span><input name="discover_mood" value="{esc(values.get("discover_mood", ""))}" placeholder="Japanese, spicy, Italian"></label><button type="submit">Find recipes <span aria-hidden="true">→</span></button><button type="submit" name="surprise" value="1" class="subtle">Surprise me ✨</button></form><p class="hint">Results, photos, and details come from TheMealDB. Quick picks below are also loaded from TheMealDB.</p></section>
+<h1>Make something good<br>with what you have.</h1>
+<section class="card discover-card"><div class="popular-heading"><h2>Explore TheMealDB</h2></div>
+<form class="discover-form" method="post" action="/discover"><label><span>Recipe name or ingredient</span><input name="discover_query" value="{esc(values.get("discover_query", ""))}" placeholder="Try eggplant, salmon, or curry"></label><label><span>Cuisine or food mood (optional)</span><input name="discover_mood" value="{esc(values.get("discover_mood", ""))}" placeholder="Japanese, spicy, Italian"></label><button type="submit">Find recipes <span aria-hidden="true">→</span></button><button type="submit" name="surprise" value="1" class="subtle">Surprise me ✨</button></form></section>
 {discovery_result}{quick_picks}
 <section class="saved-section"><h2>Saved recipes</h2><p class="meta" id="saved-empty">Your saved recipes stay in this browser.</p><div class="saved-list" id="saved-list"></div><article class="saved-detail" id="saved-detail" hidden></article></section>
 <section class="card"><div class="tabs"><button type="button" class="tab active" data-mode="online">Live recipes</button><button type="button" class="tab" data-mode="built-in">Built-in planner</button></div>
@@ -168,10 +168,8 @@ h1{{font-size:clamp(30px,5vw,48px);line-height:1.1;margin:12px 0}}.lead{{color:v
 {field("dislikes", "Ingredients to avoid", "mushrooms, cilantro")}
 <label class="field"><span>Number of meals</span><input name="count" type="number" min="1" max="7" value="{esc(values.get("count", "3"))}"></label>
 </div><div class="options"><label><input type="checkbox" name="leftovers" value="yes"{checked}> Double recipes for leftovers</label></div>
-<p class="hint">Press Enter after each search ingredient to add it. Add pantry items with a quantity and unit, or paste a list in item=amount format.</p>
 <button class="submit" type="submit">Build my meal plan <span aria-hidden="true">→</span></button></form></section>
 {result}
-<footer>Live recipe search needs an internet connection. The built-in planner works offline. Your browser connects only to this computer.</footer>
 </main><script>
 const tabs=document.querySelectorAll('.tab'),mode=document.querySelector('#mode'),online=document.querySelector('#online-fields'),local=document.querySelector('#local-fields');
 function setMode(value){{mode.value=value;online.hidden=value!=='online';local.hidden=value!=='built-in';tabs.forEach(t=>t.classList.toggle('active',t.dataset.mode===value))}}
@@ -306,8 +304,7 @@ def render_quick_carousel(meals):
             f'<button type="button" class="save-recipe" data-recipe-json="{esc(json.dumps(recipe_data))}">Save recipe</button>'
             f'<div class="detail-columns"><div><h4>Ingredients</h4><ul>{ingredients}</ul></div>'
             f'<div><h4>Instructions</h4><ol>{steps}</ol><a class="source" href="{esc(meal["url"])}" target="_blank" rel="noopener">View source recipe ↗</a></div></div></article>')
-    return (f'<section class="card quick-picks"><div class="popular-heading"><h2>Quick picks from TheMealDB</h2>'
-            f'<span>{len(slides)} recipes · refreshed every 30 minutes</span></div>'
+    return (f'<section class="card quick-picks"><div class="popular-heading"><h2>Quick picks from TheMealDB</h2></div>'
             f'<div class="quick-carousel"><button type="button" class="carousel-arrow previous" aria-label="Previous recipe">‹</button>'
             f'<div class="carousel-viewport"><div class="carousel-track">{"".join(slides)}</div></div>'
             f'<button type="button" class="carousel-arrow next" aria-label="Next recipe">›</button></div>'

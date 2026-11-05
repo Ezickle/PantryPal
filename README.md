@@ -7,17 +7,17 @@ PantryPal now has two recipe sources. Its live search connects to TheMealDB usin
 Install Python 3.10 or later, open a terminal in this folder, and run:
 
 ```text
-python pantry_pal.py
+python src/pantry_pal.py
 ```
 
-PantryPal opens a desktop window with a home screen featuring a rotating recipe banner and clickable popular recipe cards, plus separate screens for live recipe search and the built-in meal planner. The program uses only Python's standard library. It saves built-in planner preferences in `pantry_pal_memory.json` beside the program. Delete that file to reset the saved preferences. Live search needs an internet connection.
+PantryPal opens a desktop window with a home screen featuring a rotating recipe banner and clickable popular recipe cards, plus separate screens for live recipe search and the built-in meal planner. The program uses only Python's standard library. It saves built-in planner preferences in `src/pantry_pal_memory.json` beside the program. Delete that file to reset the saved preferences. Live search needs an internet connection.
 
 ## Run the web app
 
 PantryPal also has a local browser interface that uses only Python's standard library. From this folder, run:
 
 ```text
-python pantry_pal_web.py
+python src/pantry_pal_web.py
 ```
 
 It opens `http://127.0.0.1:8765` in your browser. The server is available only on your own computer; it does not publish the app to the internet or require paid hosting or a subscription. The browser home page loads a rotating carousel of cached recipe picks, photos, and details from TheMealDB; discovery results appear directly below the search form. The browser interface also includes the built-in planner, saved recipes, an editable and checkable shopping list, and meal plan export. Browser-saved recipes and shopping-list progress are stored in that browser's local storage. Built-in meal planning works offline. Live recipe search, discovery, and homepage picks need an internet connection.
@@ -43,19 +43,13 @@ The recipe objective rewards use of pantry stock and protein while accounting fo
 
 Online recipe likes and dislikes are stored in pantry_pal_online_feedback.json. If a misspelling is similarly close to multiple ingredient names, the search asks the user to choose rather than guessing.
 
-Run the checks with: python -m unittest -v test_pantry_pal.py. The standard-library test suite covers planning, unit conversion, package estimates, mood filtering, API response parsing, substitutions, variants, typo matching, and saved online feedback.
+Run the checks with: `python -m unittest discover -s src -v`. The standard-library test suite covers planning, unit conversion, package estimates, mood filtering, API response parsing, substitutions, variants, typo matching, and saved online feedback.
 
-- `pantry_pal.py` — built-in recipe catalog, agent policy, grocery calculations, and main interface.
-- `online_recipes.py` — short live-search command-line flow and compatibility imports.
-- `recipe_api.py` — TheMealDB requests, recipe parsing, typo matching, preference screening, and saved online feedback.
-- `recipe_planner.py` — online meal selection, labels, recipe variants, substitutions, grocery output, and feedback prompts.
-- `pantry_pal_ui.py` — dark desktop interface with a sliding home carousel, clickable recipe detail panels, quick-add search chips, pantry item builder, both planners, results, and feedback.
-- `pantry_pal_web.py` — local browser interface for live recipe search and built-in meal planning.
+- `src/` — Python application modules, desktop and browser interfaces, and the standard-library regression suite.
 - `assets/` — bundled food photos and a translucent banner overlay; image source links are listed in `assets/PHOTO_CREDITS.md`.
-- `food_data.py` — JSON loading and shared ingredient, mood, and quantity helpers.
 - `data/ingredient_aliases.json` — editable ingredient aliases and alternate spellings.
 - `data/food_categories.json` — editable cuisines, mood aliases, labels, match rules, and search terms.
 - `data/dietary_rules.json`, `data/substitutions.json`, and `data/grocery_data.json` — editable screening, swap, and grocery quantity data.
-- `pantry_pal_memory.json` — created at runtime to store preferences and feedback.
+- `src/pantry_pal_memory.json` — created at runtime to store preferences and feedback.
 
 Recipe nutrition and cost values are approximate example data. Add or edit recipes in `RECIPES`; ingredient amounts are per serving and pantry units should match the units shown by each recipe.

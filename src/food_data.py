@@ -9,7 +9,7 @@ import re
 import unicodedata
 
 
-DATA_DIR = Path(__file__).with_name("data")
+DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 
 
 def load_json(filename: str):
